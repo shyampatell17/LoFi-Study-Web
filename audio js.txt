@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    let audio = new Audio("Coffee Shop Sounds.mp3");
+
+let volume = document.querySelector("#volume-control");
+volume.addEventListener("change", function(e) {
+audio.volume = e.currentTarget.value / 100;
+})
+  $('#play-pause-button').on("click",function(){
+    if($(this).hasClass('fa-play'))
+     {
+       $(this).removeClass('fa-play');
+       $(this).addClass('fa-pause');
+       autoplay = true;
+       audio.play();
+       audio.muted = false;
+     }
+    else
+     {
+      audio.muted = true;
+       $(this).removeClass('fa-pause');
+       $(this).addClass('fa-play');
+     }
+  });
+  
+  audio.onended = function() {
+       $("#play-pause-button").removeClass('fa-pause');
+       $("#play-pause-button").addClass('fa-play');
+  };
+  
+  </script>

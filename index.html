@@ -1,0 +1,287 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>lo-fy - Mid Night Focus Sound.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Foc-us.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    
+    <div>
+    <video autoplay muted loop id="myVideo">
+      <source src="videoplayback.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+    <!--Navigator-->
+
+    <nav
+      class="navbar is-primary navbar-expand"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a href="index.html" class="navbar-item">
+          <img src="Foc-us.png" alt="Foc-us' Logo" class="brand-logo" />
+        </a>
+      </div>
+      <div class="navbar-start">
+        <a href="#timer_area" class="navbar-item">Start Focusing ! </a>
+        <a href="#todo" class="navbar-item">Set your To-Do ! </a>
+        <a href="#soundboard" class="navbar-item">Play some calm sounds ! </a>
+      </div>
+    </nav>
+
+    <!---->
+     
+    <!---->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 small-box">
+          <div class="row col-md-12 small-inner-box">
+            <!---->
+            <h1>
+              <article class="clock" id="model3">
+                <h1>Work Time !</h1>
+                <div class="count">
+                  <div id="timer"></div>
+                </div>
+              </article>
+            </h1>
+          </div>
+
+          <div class="row col-md-12 small-inner-box">
+            <h1>
+              <article class="clock" id="model3">
+                <iframe
+                  src="https://open.spotify.com/embed/playlist/3OzX85nzmGiSyeZBmYYEki"
+                  width="97%"
+                  height="97%"
+                  frameborder="0"
+                  allowtransparency="true"
+                  allow="encrypted-media"
+                ></iframe>
+              </article>
+            </h1>
+          </div>
+        </div>
+        
+
+        <div class="col-md-4 content-box d1">
+          <!--ToDo Section-->
+          <section id="todo">
+            <!--Todo List Input-->
+            <div class="todo_logo">
+              <p>Your<span class="styling"> Work List !</span></p>
+              <br />
+              <div class="inputDiv">
+                <input
+                  type="text"
+                  class="input is-primary is-rounded txtb"
+                  placeholder="What do you want to finish?....."
+                />
+              </div>
+            </div>
+            <br />
+            <!--Todo List Items-->
+            <div class="container">
+              <div class="notComp">
+                <p><span class="styling">Not </span>Completed</p>
+              </div>
+              <br />
+              <div class="completed">
+                <p>Compl<span class="styling">eted</span></p>
+              </div>
+            </div>
+          </section>
+          <br />
+        </div>
+        <div class="col-md-4 content-box d2">
+          <p>AMBIENT SOUNDS...</p><BR>
+          <div>
+            <div>
+              <p>Night Ambience</p>
+              <img
+                class="button"
+                src="https://image.freepik.com/free-icon/play-alt_318-2156.png"
+                id="1"
+              />
+              <audio id="sound1" loop>
+                <source src="Night-ambience-sound.mp3" type="audio/mpeg" />
+              </audio>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                onchange="setVolume(1, this.value)"
+              />
+            </div>
+            <div>
+              <p>Street Ambience</p>
+              <img
+                class="button"
+                src="https://image.freepik.com/free-icon/play-alt_318-2156.png"
+                id="2"
+              />
+              <audio id="sound2" loop>
+                <source src="streetambience.wav" type="audio/mpeg" />
+              </audio>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                onchange="setVolume(2,this.value)"
+              />
+            </div>
+            <div>
+              <p>Rain on Window</p>
+              <img
+                class="button"
+                src="https://image.freepik.com/free-icon/play-alt_318-2156.png"
+                id="3"
+              />
+              <audio id="sound3" loop>
+                <source src="Rain.mp3" type="audio/mpeg" />
+              </audio>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                onchange="setVolume(3, this.value)"
+              />
+            </div>
+            <div>
+              <p>Airplane Ambience</p>
+              <img
+                class="button"
+                src="https://image.freepik.com/free-icon/play-alt_318-2156.png"
+                id="4"
+              />
+              <audio id="sound4" loop>
+                <source src="Airplane Ambience.mp3" type="audio/mpeg" />
+              </audio>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                onchange="setVolume(4, this.value)"
+              />
+            </div>
+            <div>
+              <p>Flowing water</p>
+              <img
+                class="button"
+                src="https://image.freepik.com/free-icon/play-alt_318-2156.png"
+                id="5"
+              />
+              <audio id="sound5" loop>
+                <source src="Water Flowing.mp3" type="audio/mpeg" />
+              </audio>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                onchange="setVolume(5, this.value)"
+              />
+            </div>
+            <div>
+              <p>Crackling Fireplace</p>
+              <img
+                class="button"
+                src="https://image.freepik.com/free-icon/play-alt_318-2156.png"
+                id="6"
+              />
+              <audio id="sound6" loop>
+                <source src="Fire Crackling.mp3" type="audio/mpeg" />
+              </audio>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                onchange="setVolume(6, this.value)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-row">
+      <nav class="navbar-footer navbar-default text-center">
+        Code by <a href="https://www.linkedin.com/in/shyam-patel-0575a4155/" class="d6">Shyam Patel </a> inspired by <a href="https://imissmycafe.com/" class="d6">imissmycafe .</a>
+      </nav>
+    </footer>
+
+
+
+    <!--</div>
+</div>-->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="audio.js"></script>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="main.js"></script>
+    <script>
+      $(".txtb").on("keyup", function (e) {
+        if (e.keyCode == 13 && $(".txtb").val() != "") {
+          var task = $("<div class='task'></div>").text($(".txtb").val());
+          var del = $("<i class='fas fa-trash'></i>").click(function () {
+            var p = $(this).parent();
+            p.fadeOut(function () {
+              p.remove();
+            });
+          });
+
+          var check = $("<i class='fas fa-check'></i>").click(function () {
+            var p = $(this).parent();
+            p.fadeOut(function () {
+              $(".completed").append(p);
+              p.fadeIn();
+            });
+            $(this).remove();
+          });
+
+          task.append(del, check);
+          $(".notComp").append(task);
+          //to clear the input
+          $(".txtb").val("");
+        }
+      });
+    </script>
+  </body>
+  <div class="spinner-wrapper">
+    <div class="spinner"></div>
+    </div>
+    <script>
+      $(document).ready(function() {
+      //Preloader
+      preloaderFadeOutTime = 1000;
+      function hidePreloader() {
+      var preloader = $('.spinner-wrapper');
+      preloader.fadeOut(preloaderFadeOutTime);
+      }
+      hidePreloader();
+      });
+      </script>
+</html>
